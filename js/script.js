@@ -1,1 +1,2 @@
-// Arquivo JS pronto para futuros scripts
+// Script padrão
+console.log('Elegância em Pratas carregado');
