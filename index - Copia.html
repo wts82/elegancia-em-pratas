@@ -8,103 +8,278 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
+  <style>
+    body { 
+        font-family: 'Poppins', sans-serif; 
+        background-color: #fff; 
+        color: #222; 
+        margin: 0; 
+        padding: 0; 
+    }
+
+    header { 
+        text-align: center; 
+        padding: 40px 0; 
+        border-bottom: 1px solid #ddd;
+        background: linear-gradient(135deg, #fafafa 0%, #ffffff 100%);
+    }
+
+    .logo-container {
+        max-width: 400px; /* AJUSTE AQUI a largura máxima da logo */
+        margin: 0 auto;
+        padding: 20px;
+    }
+
+    .logo-placeholder {
+        width: 100%; /* A logo ocupará 100% da largura do container */
+        height: 100px; /* AJUSTE AQUI a altura da logo */
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        border-radius: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 24px;
+        font-weight: 600;
+        margin: 0 auto;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+
+    /* OU use esta classe se preferir usar uma imagem real */
+    .logo-real {
+        max-width: 100%; /* Ajusta automaticamente à largura do container */
+        height: auto; /* Mantém a proporção */
+        display: block;
+        margin: 0 auto;
+    }
+
+    .product-card { 
+        border: 1px solid #eee; 
+        border-radius: 10px; 
+        padding: 15px; 
+        text-align: center; 
+        transition: 0.3s; 
+        background-color: #fff; 
+        height: 100%;
+    }
+
+    .product-card:hover { 
+        box-shadow: 0 0 15px rgba(0,0,0,0.1); 
+        transform: scale(1.03); 
+    }
+
+    .product-card img { 
+        max-width: 100%; 
+        height: 200px;
+        object-fit: cover;
+        border-radius: 10px; 
+    }
+
+    .price { 
+        color: #2ecc71; 
+        font-weight: bold; 
+        margin: 10px 0; 
+        font-size: 1.2em;
+    }
+
+    .btn-buy { 
+        background-color: #25D366; 
+        border: none; 
+        color: #fff; 
+        width: 100%; 
+        border-radius: 8px; 
+        padding: 10px; 
+        font-weight: 600; 
+        transition: 0.3s; 
+        text-decoration: none; 
+        display: inline-block; 
+    }
+
+    .btn-buy:hover { 
+        background-color: #1da851; 
+        color: #fff; 
+    }
+
+    h2.section-title { 
+        text-align: center; 
+        margin: 40px 0 20px; 
+        font-weight: 600; 
+        color: #0a0a40; 
+        font-size: 1.8em;
+    }
+
+    footer { 
+        text-align: center; 
+        padding: 30px; 
+        background-color: #f8f8f8; 
+        margin-top: 40px; 
+        font-size: 0.9rem; 
+        color: #555; 
+    }
+
+    footer a { 
+        color: #25D366; 
+        text-decoration: none; 
+        margin: 0 5px; 
+    }
+
+    footer a:hover { 
+        text-decoration: underline; 
+    }
+  </style>
 </head>
 <body>
   <header>
-    <img src="images/elegancia_em_pratas_logo.png" alt="Logo Elegância em Pratas">
-    <h1 class="mt-3">Coleção Elegância</h1>
-  </header>
+    <div class="logo-container">      
+      <!-- OPÇÃO 1: LOGO FICTÍCIA PLACEHOLDER (use esta enquanto não tem a logo real) -->
+      <!--
+      <div class="logo-placeholder">
+        ELEGÂNCIA<br>EM PRATAS
+      </div>
+      -->
+
+      <!-- OPÇÃO 2: LOGO REAL (quando tiver o arquivo, descomente esta linha e comente a de cima) -->
+      <img src="images/elegancia_em_pratas.png" alt="Logo Elegância em Pratas" class="logo-real">
+	</div>
 
   <main class="container my-5">
     <h2 class="section-title">Novidades</h2>
     <div class="row g-4">
-      <!-- Gerar blocos de produtos -->
-
+      <!-- Primeira fileira - Produtos 1-4 -->
       <div class="col-12 col-sm-6 col-md-3" data-aos="fade-up" data-aos-delay="0">
         <div class="product-card">
-          <img src="images/img1.jpeg" alt="Produto 1">
-          <h5 class="mt-2">Produto 1</h5>
-          <p class="price">R$ 55.00</p>
-          <a href="https://wa.me/5561993689193" target="_blank" class="btn-buy">Comprar no WhatsApp</a>
+          <img src="images/img1.jpeg" alt="Anel de Prata 925 Borboleta Cravejada">
+          <h5 class="mt-2">Anel de Prata 925 Borboleta Cravejada</h5>
+          <p class="price">R$ 70,60</p>
+          <a href="https://wa.me/5561993689193?text=Olá! Gostaria de comprar o Anel de Prata 925 Borboleta Cravejada" target="_blank" class="btn-buy">Comprar no WhatsApp</a>
         </div>
       </div>
     
       <div class="col-12 col-sm-6 col-md-3" data-aos="fade-up" data-aos-delay="100">
         <div class="product-card">
-          <img src="images/img2.jpeg" alt="Produto 2">
-          <h5 class="mt-2">Produto 2</h5>
-          <p class="price">R$ 60.00</p>
-          <a href="https://wa.me/5561993689193" target="_blank" class="btn-buy">Comprar no WhatsApp</a>
+          <img src="images/img2.jpeg" alt="Anel de Prata com Pingente Coração tamanho 19">
+          <h5 class="mt-2">Anel de Prata com Pingente Coração</h5>
+          <p class="price">R$ 76,70</p>
+          <a href="https://wa.me/5561993689193?text=Olá! Gostaria de comprar o Anel de Prata com Pingente Coração tamanho 19" target="_blank" class="btn-buy">Comprar no WhatsApp</a>
         </div>
       </div>
     
       <div class="col-12 col-sm-6 col-md-3" data-aos="fade-up" data-aos-delay="200">
         <div class="product-card">
-          <img src="images/img3.jpeg" alt="Produto 3">
-          <h5 class="mt-2">Produto 3</h5>
-          <p class="price">R$ 65.00</p>
-          <a href="https://wa.me/5561993689193" target="_blank" class="btn-buy">Comprar no WhatsApp</a>
+          <img src="images/img3.jpeg" alt="Brinco de Prata 925 Laço">
+          <h5 class="mt-2">Brinco de Prata 925 Laço</h5>
+          <p class="price">R$ 69,90</p>
+          <a href="https://wa.me/5561993689193?text=Olá! Gostaria de comprar o Brinco de Prata 925 Laço" target="_blank" class="btn-buy">Comprar no WhatsApp</a>
         </div>
       </div>
     
       <div class="col-12 col-sm-6 col-md-3" data-aos="fade-up" data-aos-delay="300">
         <div class="product-card">
-          <img src="images/img4.jpeg" alt="Produto 4">
-          <h5 class="mt-2">Produto 4</h5>
-          <p class="price">R$ 70.00</p>
-          <a href="https://wa.me/5561993689193" target="_blank" class="btn-buy">Comprar no WhatsApp</a>
+          <img src="images/img4.jpeg" alt="Anel de Prata 925 Solitário com Aro Cravejado Luxo">
+          <h5 class="mt-2">Anel Solitário Aro Cravejado Luxo</h5>
+          <p class="price">R$ 125,00</p>
+          <a href="https://wa.me/5561993689193?text=Olá! Gostaria de comprar o Anel de Prata 925 Solitário com Aro Cravejado Luxo tamanho 19" target="_blank" class="btn-buy">Comprar no WhatsApp</a>
         </div>
       </div>
-    
+
+      <!-- Segunda fileira - Produtos 5-8 -->
       <div class="col-12 col-sm-6 col-md-3" data-aos="fade-up" data-aos-delay="400">
         <div class="product-card">
-          <img src="images/img5.jpeg" alt="Produto 5">
-          <h5 class="mt-2">Produto 5</h5>
-          <p class="price">R$ 75.00</p>
-          <a href="https://wa.me/5561993689193" target="_blank" class="btn-buy">Comprar no WhatsApp</a>
+          <img src="images/img5.jpeg" alt="Brinco de Prata 925 Argola P Cravejada">
+          <h5 class="mt-2">Brinco Argola P Cravejada</h5>
+          <p class="price">R$ 65,80</p>
+          <a href="https://wa.me/5561993689193?text=Olá! Gostaria de comprar o Brinco de Prata 925 Argola P Cravejada" target="_blank" class="btn-buy">Comprar no WhatsApp</a>
         </div>
       </div>
     
       <div class="col-12 col-sm-6 col-md-3" data-aos="fade-up" data-aos-delay="500">
         <div class="product-card">
-          <img src="images/img6.jpeg" alt="Produto 6">
-          <h5 class="mt-2">Produto 6</h5>
-          <p class="price">R$ 80.00</p>
-          <a href="https://wa.me/5561993689193" target="_blank" class="btn-buy">Comprar no WhatsApp</a>
+          <img src="images/img6.jpeg" alt="Pulseira de Prata 925 Ponto de Luz Safira">
+          <h5 class="mt-2">Pulseira Ponto de Luz Safira</h5>
+          <p class="price">R$ 77,90</p>
+          <a href="https://wa.me/5561993689193?text=Olá! Gostaria de comprar a Pulseira de Prata 925 Ponto de Luz Safira" target="_blank" class="btn-buy">Comprar no WhatsApp</a>
         </div>
       </div>
     
       <div class="col-12 col-sm-6 col-md-3" data-aos="fade-up" data-aos-delay="600">
         <div class="product-card">
-          <img src="images/img7.jpeg" alt="Produto 7">
-          <h5 class="mt-2">Produto 7</h5>
-          <p class="price">R$ 85.00</p>
-          <a href="https://wa.me/5561993689193" target="_blank" class="btn-buy">Comprar no WhatsApp</a>
+          <img src="images/img7.jpeg" alt="Brinco de Prata Círculo Vazado Cravejado">
+          <h5 class="mt-2">Brinco Círculo Vazado Cravejado</h5>
+          <p class="price">R$ 65,80</p>
+          <a href="https://wa.me/5561993689193?text=Olá! Gostaria de comprar o Brinco de Prata Círculo Vazado Cravejado" target="_blank" class="btn-buy">Comprar no WhatsApp</a>
         </div>
       </div>
     
       <div class="col-12 col-sm-6 col-md-3" data-aos="fade-up" data-aos-delay="700">
         <div class="product-card">
-          <img src="images/img8.jpeg" alt="Produto 8">
-          <h5 class="mt-2">Produto 8</h5>
-          <p class="price">R$ 90.00</p>
-          <a href="https://wa.me/5561993689193" target="_blank" class="btn-buy">Comprar no WhatsApp</a>
+          <img src="images/img8.jpeg" alt="Colar de Prata 925 Círculo Vazado Cravejado">
+          <h5 class="mt-2">Colar Círculo Vazado Cravejado</h5>
+          <p class="price">R$ 140,00</p>
+          <a href="https://wa.me/5561993689193?text=Olá! Gostaria de comprar o Colar de Prata 925 Círculo Vazado Cravejado" target="_blank" class="btn-buy">Comprar no WhatsApp</a>
+        </div>
+      </div>
+
+      <!-- Terceira fileira - Produtos 9-12 -->
+      <div class="col-12 col-sm-6 col-md-3" data-aos="fade-up" data-aos-delay="0">
+        <div class="product-card">
+          <img src="images/img9.jpeg" alt="Mini Argola de Prata 925 com 3 Corações Cravejados">
+          <h5 class="mt-2">Mini Argola com 3 Corações</h5>
+          <p class="price">R$ 54,90</p>
+          <a href="https://wa.me/5561993689193?text=Olá! Gostaria de comprar a Mini Argola de Prata 925 com 3 Corações Cravejados" target="_blank" class="btn-buy">Comprar no WhatsApp</a>
         </div>
       </div>
     
+      <div class="col-12 col-sm-6 col-md-3" data-aos="fade-up" data-aos-delay="100">
+        <div class="product-card">
+          <img src="images/img10.jpeg" alt="Pulseira de Prata 925 para Berloques Cravejado">
+          <h5 class="mt-2">Pulseira para Berloques Cravejado</h5>
+          <p class="price">R$ 249,90</p>
+          <a href="https://wa.me/5561993689193?text=Olá! Gostaria de comprar a Pulseira de Prata 925 para Berloques Cravejado 2mm - 18cm" target="_blank" class="btn-buy">Comprar no WhatsApp</a>
+        </div>
+      </div>
+    
+      <div class="col-12 col-sm-6 col-md-3" data-aos="fade-up" data-aos-delay="200">
+        <div class="product-card">
+          <img src="images/img11.jpg" alt="Anel de Prata 925 Solitário Tradicional">
+          <h5 class="mt-2">Anel Solitário Tradicional</h5>
+          <p class="price">R$ 60,90</p>
+          <a href="https://wa.me/5561993689193?text=Olá! Gostaria de comprar o Anel de Prata 925 Solitário Tradicional tamanho 19" target="_blank" class="btn-buy">Comprar no WhatsApp</a>
+        </div>
+      </div>
+    
+      <div class="col-12 col-sm-6 col-md-3" data-aos="fade-up" data-aos-delay="300">
+        <div class="product-card">
+          <img src="images/img12.jpg" alt="Trio Brinco de Prata 925 Zircônia Redondo">
+          <h5 class="mt-2">Trio Brinco Zircônia Redondo</h5>
+          <p class="price">R$ 58,90</p>
+          <a href="https://wa.me/5561993689193?text=Olá! Gostaria de comprar o Trio Brinco de Prata 925 Zircônia Redondo" target="_blank" class="btn-buy">Comprar no WhatsApp</a>
+        </div>
+      </div>
+
+      <!-- Quarta fileira - Produtos 13-16 -->
+      <div class="col-12 col-sm-6 col-md-3" data-aos="fade-up" data-aos-delay="400">
+        <div class="product-card">
+          <img src="images/img13.jpg" alt="Pulseira de Prata 925 Coração Cravejado Central">
+          <h5 class="mt-2">Pulseira Coração Cravejado Central</h5>
+          <p class="price">R$ 126,90</p>
+          <a href="https://wa.me/5561993689193?text=Olá! Gostaria de comprar a Pulseira de Prata 925 Coração Cravejado Central" target="_blank" class="btn-buy">Comprar no WhatsApp</a>
+        </div>
+      </div>
     </div>
   </main>
+
   <footer>
     <p>© 2025 Elegância em Pratas | Todos os direitos reservados</p>
     <p>
       <a href="https://wa.me/5561993689193" target="_blank">WhatsApp</a> |
-      <a href="https://instagram.com/" target="_blank">Instagram</a>
+      <a href="https://instagram.com/pratasdamaia925" target="_blank">Instagram</a>
     </p>
   </footer>
+
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-  <script src="js/script.js"></script>
-  <script>AOS.init({ duration: 1000, once: true });</script>
+  <script>
+    AOS.init({ duration: 1000, once: true });
+  </script>
 </body>
 </html>
